@@ -82,13 +82,13 @@ def presignS3Link(s3link, publish = true) {
 node {
     REGISTRY_URL = 'https://registry-internal.global.famoco.com:5000'
     def buildImageName = 'famoco/android-sdk-tools-31-jdk11:1.0'
-    def appName = 'keyple-plugin-pcl-sample-app'
+    def appName = 'keyple-plugin-sample-app'
 
     properties([
             parameters([
                     string(defaultValue: '', name: 'RELEASE_TAG'),
                     string(defaultValue: 'famoco-mob', name: 'UPLOAD_BUCKET'),
-                    string(defaultValue: 'keyple-pcl-plugin-release', name: 'UPLOAD_BUCKET_PREFIX'),
+                    string(defaultValue: 'keyple-plugin-sample-app-release', name: 'UPLOAD_BUCKET_PREFIX'),
                     string(defaultValue: 'eu-west-1', name: 'UPLOAD_BUCKET_REGION'),
                     booleanParam(defaultValue: false, name: 'SKIP_CLEAN'),
                     booleanParam(defaultValue: false, name: 'SKIP_BUILD'),
@@ -123,7 +123,7 @@ node {
 
     def sourcesArchiveFileName = "${appName}-${RELEASE_TAG}-sources.zip"
     cstage('archive', !params.SKIP_ARCHIVE) {
-        bash("git archive --format zip ${RELEASE_TAG}:sample-app > ${sourcesArchiveFileName}")
+        bash("git archive --format zip ${RELEASE_TAG} > ${sourcesArchiveFileName}")
     }
 
 
@@ -131,10 +131,10 @@ node {
     cstage('save', !params.SKIP_SAVE) {
         if (!params.SKIP_ARCHIVE) {
             echo "Save source archive : ${sourcesArchiveFileName}"
-            save('.', sourcesArchiveFileName, 'keyple_plugin_pcl_sample_app_sources_http_url')
+            save('.', sourcesArchiveFileName, 'keyple_plugin_sample_app_sources_http_url')
         }
 
         echo "Save built APK : ${builtAPKFileName}"
-        save('dist', builtAPKFileName, 'keyple_plugin_pcl_sample_app_apk_http_url')
+        save('dist', builtAPKFileName, 'keyple_plugin_sample_app_apk_http_url')
     }
 }

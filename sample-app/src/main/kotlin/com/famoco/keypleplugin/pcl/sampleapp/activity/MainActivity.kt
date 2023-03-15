@@ -15,7 +15,6 @@ package com.famoco.keypleplugin.pcl.sampleapp.activity
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
 import com.famoco.keypleplugin.pcl.*
-import com.famoco.keypleplugin.pcl.enums.SupportedContactProtocols
 import com.famoco.keypleplugin.pcl.enums.SupportedContactlessProtocols
 import java.util.concurrent.atomic.AtomicBoolean
 import kotlinx.android.synthetic.main.activity_main.drawerLayout

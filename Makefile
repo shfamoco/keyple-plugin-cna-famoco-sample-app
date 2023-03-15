@@ -36,7 +36,6 @@ help:
 	@echo "    make <module>Assemble<variant>           Build module for a specific variant."
 	@echo "    make <module>Assemble<variant> dist [s3] Copy the dist'ed artifacts to DIST_DIR, by default 'dist'."
 	@echo "    make gradle <arguments>                  Run gradle with the given arguments."
-	@echo '    make scan                                Run a static code analysis with SonarScanner.'
 	@echo '    make javadoc                             Generate java doc.'
 	@echo "    make test                                Run tests."
 	@echo "    make clean                               Clean the build directory."
@@ -47,11 +46,6 @@ help:
 .PHONY: assemble
 assemble: $(COMMAND_ARGS)
 	@echo "assembling"
-
-.PHONY: scan
-scan:
-	@echo "scanning"
-	$(hide) @$(BUILD_DOCKER_CMD) $(GRADLE) --stacktrace sonarqube -Dsonar.host.url=$(SONAR_URL) -Dsonar.login=$(SONAR_TOKEN)
 
 .PHONY: clean
 clean:

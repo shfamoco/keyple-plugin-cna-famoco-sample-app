@@ -13,5 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "keyple-pcl-plugin"
-include (":plugin")
 include(":sample-app")
