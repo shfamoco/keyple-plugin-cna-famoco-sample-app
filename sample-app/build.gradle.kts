@@ -13,8 +13,8 @@ android {
         applicationId = "com.famoco.keypleplugin.sampleapp"
         minSdk = 19
         targetSdk = 33
-        versionCode = 10
-        versionName = "0.1.0"
+        versionCode = 100
+        versionName = "1.0.0"
         multiDexEnabled = true
 
         setProperty("archivesBaseName", "keyple-plugin-sample-app-$versionName")
