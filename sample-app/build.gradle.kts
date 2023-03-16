@@ -15,6 +15,7 @@ android {
         targetSdk = 33
         versionCode = 10
         versionName = "0.1.0"
+        multiDexEnabled = true
 
         setProperty("archivesBaseName", "keyple-plugin-pcl-sample-app-$versionName")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -57,6 +58,7 @@ val kotlinVersion: String by project
 dependencies {
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
+    implementation("org.calypsonet.keyple:keyple-plugin-cna-famoco-se-communication-java-lib:2.0.2")
 
     implementation("org.calypsonet.terminal:calypsonet-terminal-reader-java-api:1.2.0") {
         isChanging = true
@@ -78,6 +80,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.6.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.8.0")
+    implementation("androidx.multidex:multidex:2.0.1")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
