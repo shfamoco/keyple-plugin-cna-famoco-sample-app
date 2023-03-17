@@ -1,0 +1,10 @@
+.gitignore export-ignore
+.gitattributes export-ignore
+
+build export-ignore
+make export-ignore
+
+Jenkinsfile export-ignore
+Makefile export-ignore
+
+*/Module.mk export-ignore
