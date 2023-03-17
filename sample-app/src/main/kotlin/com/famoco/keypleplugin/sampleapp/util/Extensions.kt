@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.util
+package com.famoco.keypleplugin.sampleapp.util
 
 import android.content.Context
 import android.os.Build

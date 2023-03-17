@@ -5,19 +5,19 @@ plugins {
 }
 
 android {
-    namespace = "com.famoco.keypleplugin.pcl.sampleapp"
+    namespace = "com.famoco.keypleplugin.sampleapp"
     compileSdk = 33
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "com.famoco.keypleplugin.pcl.sampleapp"
+        applicationId = "com.famoco.keypleplugin.sampleapp"
         minSdk = 19
         targetSdk = 33
         versionCode = 10
         versionName = "0.1.0"
         multiDexEnabled = true
 
-        setProperty("archivesBaseName", "keyple-plugin-pcl-sample-app-$versionName")
+        setProperty("archivesBaseName", "keyple-plugin-sample-app-$versionName")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 

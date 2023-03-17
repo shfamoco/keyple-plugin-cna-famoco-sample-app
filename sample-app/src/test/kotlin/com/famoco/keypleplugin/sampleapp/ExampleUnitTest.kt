@@ -1,4 +1,4 @@
-package com.famoco.keypleplugin.pcl.sampleapp
+package com.famoco.keypleplugin.sampleapp
 
 import org.junit.Test
 

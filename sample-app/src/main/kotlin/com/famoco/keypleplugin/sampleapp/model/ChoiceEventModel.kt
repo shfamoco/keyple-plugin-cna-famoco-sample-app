@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.model
+package com.famoco.keypleplugin.sampleapp.model
 
 data class ChoiceEventModel(
     val title: String,

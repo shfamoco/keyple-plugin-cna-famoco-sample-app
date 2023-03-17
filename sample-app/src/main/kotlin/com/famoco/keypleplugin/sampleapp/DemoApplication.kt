@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp
+package com.famoco.keypleplugin.sampleapp
 
 import android.app.Application
 import timber.log.Timber

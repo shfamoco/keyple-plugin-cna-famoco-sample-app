@@ -30,7 +30,7 @@ default: help
 
 .PHONY: help
 help:
-	@echo "Management commands for keyple-plugin-pcl-lib:"
+	@echo "Management commands for keyple-plugin-lib:"
 	@echo
 	@echo "Usage:"
 	@echo "    make <module>Assemble<variant>           Build module for a specific variant."

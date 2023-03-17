@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.util
+package com.famoco.keypleplugin.sampleapp.util
 
 /**
  * Helper class to provide specific elements to handle Calypso cards.

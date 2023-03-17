@@ -9,19 +9,19 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.adapter
+package com.famoco.keypleplugin.sampleapp.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
 import androidx.recyclerview.widget.RecyclerView
-import com.famoco.keypleplugin.pcl.sampleapp.R
+import com.famoco.keypleplugin.sampleapp.R
 import kotlinx.android.synthetic.main.card_action_event.view.cardActionTextView
 import kotlinx.android.synthetic.main.card_choice_event.view.choiceRadioGroup
-import com.famoco.keypleplugin.pcl.sampleapp.model.ChoiceEventModel
-import com.famoco.keypleplugin.pcl.sampleapp.model.EventModel
-import com.famoco.keypleplugin.pcl.sampleapp.util.getColorResource
+import com.famoco.keypleplugin.sampleapp.model.ChoiceEventModel
+import com.famoco.keypleplugin.sampleapp.model.EventModel
+import com.famoco.keypleplugin.sampleapp.util.getColorResource
 
 class EventAdapter(private val events: ArrayList<EventModel>) :
     RecyclerView.Adapter<EventAdapter.ViewHolder>() {

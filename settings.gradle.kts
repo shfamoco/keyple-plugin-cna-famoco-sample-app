@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "keyple-pcl-plugin"
+rootProject.name = "keyple-plugin-sample-app"
 include(":sample-app")

@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.activity
+package com.famoco.keypleplugin.sampleapp.activity
 
 import android.view.MenuItem
 import androidx.core.view.GravityCompat
@@ -22,8 +22,8 @@ import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.famoco.keypleplugin.pcl.sampleapp.R
-import com.famoco.keypleplugin.pcl.sampleapp.util.CalypsoClassicInfo
+import com.famoco.keypleplugin.sampleapp.R
+import com.famoco.keypleplugin.sampleapp.util.CalypsoClassicInfo
 import org.calypsonet.keyple.plugin.famoco.AndroidFamocoPlugin
 import org.calypsonet.keyple.plugin.famoco.AndroidFamocoPluginFactoryProvider
 import org.calypsonet.keyple.plugin.famoco.AndroidFamocoReader

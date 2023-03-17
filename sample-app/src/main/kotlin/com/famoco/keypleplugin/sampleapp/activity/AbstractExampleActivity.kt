@@ -10,7 +10,7 @@
  *
  * SPDX-License-Identifier: EPL-2.0
  ************************************************************************************** */
-package com.famoco.keypleplugin.pcl.sampleapp.activity
+package com.famoco.keypleplugin.sampleapp.activity
 
 import android.os.Bundle
 import android.view.WindowManager
@@ -21,7 +21,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.famoco.keypleplugin.pcl.FamocoPclContactlessReader
-import com.famoco.keypleplugin.pcl.sampleapp.R
+import com.famoco.keypleplugin.sampleapp.R
 import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.activity_main.drawerLayout
 import kotlinx.android.synthetic.main.activity_main.eventRecyclerView
@@ -30,10 +30,10 @@ import kotlinx.android.synthetic.main.activity_main.toolbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import com.famoco.keypleplugin.pcl.sampleapp.adapter.EventAdapter
-import com.famoco.keypleplugin.pcl.sampleapp.model.ChoiceEventModel
-import com.famoco.keypleplugin.pcl.sampleapp.model.EventModel
-import com.famoco.keypleplugin.pcl.sampleapp.util.CalypsoClassicInfo.SAM_PROFILE_NAME
+import com.famoco.keypleplugin.sampleapp.adapter.EventAdapter
+import com.famoco.keypleplugin.sampleapp.model.ChoiceEventModel
+import com.famoco.keypleplugin.sampleapp.model.EventModel
+import com.famoco.keypleplugin.sampleapp.util.CalypsoClassicInfo.SAM_PROFILE_NAME
 import org.calypsonet.terminal.calypso.WriteAccessLevel
 import org.calypsonet.terminal.calypso.sam.CalypsoSam
 import org.calypsonet.terminal.calypso.transaction.CardSecuritySetting
