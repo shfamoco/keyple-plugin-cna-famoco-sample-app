@@ -71,9 +71,6 @@ class MainActivity : AbstractExampleActivity() {
     private val readerStateListener = object : FamocoPclReaderStateListener {
         override fun onReaderAvailable() {
             addActionEvent("Enabling NFC Reader mode")
-            (poReader as ObservableCardReader).startCardDetection(
-                ObservableCardReader.DetectionMode.REPEATING
-            )
             areReadersInitialized.set(true)
             addResultEvent("Please choose a use case")
         }
@@ -123,15 +120,24 @@ class MainActivity : AbstractExampleActivity() {
 
     }
 
-    /** Called when the activity (screen) is put in foreground */
-    override fun onStart() {
+    private fun relaunchCardDetection(){
         if (areReadersInitialized.get()) {
-            addActionEvent("Enabling NFC Reader mode")
+            var contactlessReader = (poReader as ObservableCardReader)
+
             // Stop NFC card detection
-            (poReader as ObservableCardReader).startCardDetection(
+            contactlessReader.stopCardDetection()
+
+            addActionEvent("Enabling NFC Reader mode")
+            // Start NFC card detection
+            contactlessReader.startCardDetection(
                 ObservableCardReader.DetectionMode.REPEATING
             )
         }
+    }
+
+    /** Called when the activity (screen) is put in foreground */
+    override fun onStart() {
+        relaunchCardDetection()
         super.onStart()
     }
 
@@ -173,6 +179,7 @@ class MainActivity : AbstractExampleActivity() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START)
         }
+        relaunchCardDetection()
         when (item.itemId) {
             R.id.usecase1 -> {
                 clearEvents()
