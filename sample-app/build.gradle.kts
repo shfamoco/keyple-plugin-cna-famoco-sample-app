@@ -58,7 +58,7 @@ val kotlinVersion: String by project
 dependencies {
 
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
-    implementation("org.calypsonet.keyple:keyple-plugin-cna-famoco-se-communication-java-lib:2.0.2")
+    implementation("io.github.famoco:keyple-plugin-se-communication-lib:2.1.0")
 
     implementation("org.calypsonet.terminal:calypsonet-terminal-reader-java-api:1.2.0") {
         isChanging = true
